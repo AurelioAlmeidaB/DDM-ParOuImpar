@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Par ou Ímpar"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSmart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Smartphone"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <ImageView
+        android:id="@+id/imgSmart"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSmart"
+        app:srcCompat="@drawable/interrogacao" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Vamos jogar?"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgSmart" />
+
+    <ImageView
+        android:id="@+id/imgMao0"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgMao1"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:srcCompat="@drawable/mao0" />
+
+    <ImageView
+        android:id="@+id/imgMao1"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgMao2"
+        app:layout_constraintStart_toEndOf="@+id/imgMao0"
+        app:layout_constraintTop_toTopOf="@+id/imgMao0"
+        app:srcCompat="@drawable/mao1" />
+
+    <ImageView
+        android:id="@+id/imgMao2"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgMao3"
+        app:layout_constraintStart_toEndOf="@+id/imgMao1"
+        app:layout_constraintTop_toTopOf="@+id/imgMao0"
+        app:srcCompat="@drawable/mao2" />
+
+    <ImageView
+        android:id="@+id/imgMao3"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgMao4"
+        app:layout_constraintStart_toEndOf="@+id/imgMao2"
+        app:layout_constraintTop_toTopOf="@+id/imgMao0"
+        app:srcCompat="@drawable/mao3" />
+
+    <ImageView
+        android:id="@+id/imgMao4"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgMao5"
+        app:layout_constraintStart_toEndOf="@+id/imgMao3"
+        app:layout_constraintTop_toTopOf="@+id/imgMao0"
+        app:srcCompat="@drawable/mao4" />
+
+    <ImageView
+        android:id="@+id/imgMao5"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgMao4"
+        app:layout_constraintTop_toTopOf="@+id/imgMao0"
+        app:srcCompat="@drawable/mao5" />
+
+    <TextView
+        android:id="@+id/txtSuaEscolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Sua escolha"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMao0" />
+
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSuaEscolha"
+        app:srcCompat="@drawable/interrogacao" />
+
+    <Button
+        android:id="@+id/btnPar"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Par"
+        app:layout_constraintEnd_toStartOf="@+id/btnImpar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgUser" />
+
+    <Button
+        android:id="@+id/btnImpar"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Ímpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPar"
+        app:layout_constraintTop_toTopOf="@+id/btnPar" />
+
+    <Button
+        android:id="@+id/btnJogar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Jogar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPar" />
+
+    <TextView
+        android:id="@+id/txtAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Aurelio Almeida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
